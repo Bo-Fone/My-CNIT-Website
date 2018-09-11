@@ -1,4 +1,8 @@
 input {
   text-align: right;
 }
+
+#num-input {
+  background-color: darkgrey;
+}
 /*# sourceMappingURL=extracredit.css.map */

@@ -17,8 +17,11 @@
                 $("#flip").click(function(){
                     $("#panel").slideToggle("slow");
                     });
-                $("#input").click(function() {
-                    $("#input").css("background-color", "white");
+                $("#num-input").click(function() {
+                    $("#num-input").css("background-color", "white");
+                });
+                $("#convert").click(function() {
+                    $("#num-input").css("background-color", "darkgray");
                 });
             });
         </script>
@@ -90,7 +93,7 @@
                     <tfoot>
                         <tr>
                             <td colspan="2">Enter the amount of U.S. Dollars:</td>
-                            <td><input type="text" name="input" required></td>
+                            <td><input type="text" name="input" id="num-input" required></td>
                         </tr>
                         <tr>
                             <td colspan="3"><button type="button" id="convert">Convert</button></td>
