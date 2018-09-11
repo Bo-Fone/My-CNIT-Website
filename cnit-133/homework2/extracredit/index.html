@@ -9,6 +9,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./extracredit.css">
+        <link rel="stylesheet" href="../general.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script defer>
+
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle("slow");
+                    });
+                $("#input").click(function() {
+                    $("#input").css("background-color", "white");
+                });
+            });
+
+
+
+            // function exchangeTableUpdate() {
+            //     const GBP = 0.77521;
+            //     const CAD = 1.34461;
+            //     const EUR = 0.88754;
+            //     const JPY = 109.350;
+            //     const MXN = 18.2806;
+
+            //     // document.forms["exchangeRateTable"].elements["GBP"].value = GBP;
+            //     // document.forms["exchangeRateTable"].elements["CAD"].value = CAD;
+            //     // document.forms["exchangeRateTable"].elements["EUR"].value = EUR;
+            //     // document.forms["exchangeRateTable"].elements["JPY"].value = JPY;
+            //     // document.forms["exchangeRateTable"].elements["MXN"].value = MXN;
+            //         let usdInput = document.forms["exchangeRateTable"].elements["input"].value;
+            // }
+
+
+        </script>
         <title>Homework 2: Extra Credit</title>
     </head>
 
@@ -30,25 +62,71 @@
 
         <section>
             <h5>Content</h5>
-            <script defer>
-                printCalculation();
-
-                function printCalculation() {
-                    document.write("<table><tr><th>Number</th><th>Squre</th><th>Cube</th></tr>");
-                    for (r = 1; r <= 6; r++) {
-                        document.write("<tr>");
-                        for (d = 1; d <= 3; d++) {
-                            document.write("<td>" + Math.pow(r, d) + "</td>");
-                        }
-                        document.write("</tr>");
-                    }
-                    document.write("</table");
-                }
-            </script>
+            <div id="flip">Click to Show/Hide Instructions</div>
+            <div id="panel">
+                <p>The foreign exchange rates on June 6, 2017</p>
+                <p>Enter a dollar amount in the table below to see the corresponding foreign exchange values</p>
+            </div>
+            <form name="exchangeRateTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3">Monetary Exchange Rates</th>
+                        </tr>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Rate</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>British Pound</td>
+                            <td><input type="text" name="GBP" readonly></td>
+                            <td><input type="text" name="GBP-USD" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Canadian Dollar</td>
+                            <td><input type="text" name="CAD" readonly></td>
+                            <td><input type="text" name="CAD-USD" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Euro</td>
+                            <td><input type="text" name="EUR" readonly></td>
+                            <td><input type="text" name="EUR-USD" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Japanese Yen</td>
+                            <td><input type="text" name="JPY" readonly></td>
+                            <td><input type="text" name="JPY-USD" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Mexican Peso</td>
+                            <td><input type="text" name="MXN" readonly></td>
+                            <td><input type="text" name="MXN-USD" readonly></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><label for="input">Enter the amount of U.S. Dollars:</label></td>
+                            <td><input type="text" name="input" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><button type="button" id="convert">Convert</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
         </section>
 
         <footer>
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                title="HTML5 Powered with CSS3 / Styling, and Semantics" usemap="#html5logomap" />
 
+            <map name="html5logomap">
+                <area shape="rect" coords="0,0,58,64" alt="HTML Validation" href="https://validator.w3.org/check?uri=referer" />
+                <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation" href="https://jigsaw.w3.org/css-validator/check/referer" />
+            </map>
         </footer>
 
     </body>

@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./part3.css">
+        <link rel="stylesheet" href="../general.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Homework 2: Part 3</title>
     </head>
@@ -54,26 +55,32 @@
                         <td><input type="text" name="fifthNumber" required></td>
                     </tr>
                     <tr>
-                        <td><textarea name="output" cols="30" rows="10" readonly></textarea></td>
+                        <td colspan="2"><textarea name="output" cols="30" rows="10" readonly></textarea></td>
                     </tr>
                     <tr>
                         <td><button type="button" id="process">Process</button></td>
                         <td><button type="reset">Reset</button></td>
                     </tr>
                     <tr>
-                        <td><button type="button" id="toggle-result">Toggle Result</button></td>
+                        <td colspan="2"><button type="button" id="toggle-result">Toggle Result</button></td>
                     </tr>
                 </table>
             </form>
         </section>
 
         <footer>
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                title="HTML5 Powered with CSS3 / Styling, and Semantics" usemap="#html5logomap" />
 
+            <map name="html5logomap">
+                <area shape="rect" coords="0,0,58,64" alt="HTML Validation" href="https://validator.w3.org/check?uri=referer" />
+                <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation" href="https://jigsaw.w3.org/css-validator/check/referer" />
+            </map>
         </footer>
 
         <script defer>
             document.getElementById("process").onclick = function () {
-                process()
+                process();
             };
 
             $(document).ready(function () {

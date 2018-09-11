@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=part1.css.map */
+#a {
+  font-family: 'Times New Roman', Times, serif;
+  color: red;
+}
+
+#b {
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+#c {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  color: green;
+}
+/*# sourceMappingURL=part1.css.map */
