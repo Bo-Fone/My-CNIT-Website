@@ -21,25 +21,6 @@
                     $("#input").css("background-color", "white");
                 });
             });
-
-
-
-            // function exchangeTableUpdate() {
-            //     const GBP = 0.77521;
-            //     const CAD = 1.34461;
-            //     const EUR = 0.88754;
-            //     const JPY = 109.350;
-            //     const MXN = 18.2806;
-
-            //     // document.forms["exchangeRateTable"].elements["GBP"].value = GBP;
-            //     // document.forms["exchangeRateTable"].elements["CAD"].value = CAD;
-            //     // document.forms["exchangeRateTable"].elements["EUR"].value = EUR;
-            //     // document.forms["exchangeRateTable"].elements["JPY"].value = JPY;
-            //     // document.forms["exchangeRateTable"].elements["MXN"].value = MXN;
-            //         let usdInput = document.forms["exchangeRateTable"].elements["input"].value;
-            // }
-
-
         </script>
         <title>Homework 2: Extra Credit</title>
     </head>
@@ -128,6 +109,42 @@
                 <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation" href="https://jigsaw.w3.org/css-validator/check/referer" />
             </map>
         </footer>
+
+        <script>
+            const GBP = 0.77521;
+            const CAD = 1.34461;
+            const EUR = 0.88754;
+            const JPY = 109.350;
+            const MXN = 18.2806;
+
+            document.forms["exchangeRateTable"].elements["GBP"].value = GBP;
+            document.forms["exchangeRateTable"].elements["CAD"].value = CAD;
+            document.forms["exchangeRateTable"].elements["EUR"].value = EUR;
+            document.forms["exchangeRateTable"].elements["JPY"].value = JPY;
+            document.forms["exchangeRateTable"].elements["MXN"].value = MXN;
+
+            document.getElementById("convert").onclick = function () {
+                exchangeTableUpdate();
+            };
+
+            function exchangeTableUpdate() {
+                let usdInput = parseFloat(document.forms["exchangeRateTable"].elements["input"].value);
+
+                let gbpToUSD, cadToUSD, eurToUSD, jpyToUSD, mxnToUSD;
+
+                gbpToUSD = GBP * usdInput;
+                cadToUSD = CAD * usdInput;
+                eurToUSD = EUR * usdInput;
+                jpyToUSD = JPY * usdInput;
+                mxnToUSD = MXN * usdInput;
+
+                document.forms["exchangeRateTable"].elements["GBP-USD"].value = gbpToUSD.toFixed(2);
+                document.forms["exchangeRateTable"].elements["CAD-USD"].value = cadToUSD.toFixed(2);
+                document.forms["exchangeRateTable"].elements["EUR-USD"].value = eurToUSD.toFixed(2);
+                document.forms["exchangeRateTable"].elements["JPY-USD"].value = jpyToUSD.toFixed(2);
+                document.forms["exchangeRateTable"].elements["MXN-USD"].value = mxnToUSD.toFixed(2);
+            }
+        </script>
 
     </body>
 
