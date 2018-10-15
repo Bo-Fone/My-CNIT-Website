@@ -1,0 +1,254 @@
+/*Import Resources*/
+/*Varaibles*/
+/*Lists*/
+/*Maps*/
+/*Mixins*/
+/*Tag Styles*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+* body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #D2EFFC;
+}
+
+* body .grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -ms-grid-rows: 1fr 840px 1fr;
+  -ms-grid-columns: 1fr 750px 1fr;
+      grid-template: 1fr 840px 1fr / 1fr 750px 1fr;
+}
+
+* body .grid .bookshelve {
+  margin: 0;
+  padding: 0;
+  width: 750px;
+  height: 840px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+* body .grid .shelves {
+  margin: 0;
+  padding: 0;
+  width: 750px;
+  height: 840px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+* body .grid .shelves .shelves_grid {
+  display: -ms-grid;
+  display: grid;
+  width: 750px;
+  height: 840px;
+  -ms-grid-rows: 45px 228px 29px 226px 30px 227px 55px;
+  -ms-grid-columns: 43px 16px 621px 15px 55px;
+      grid-template: 45px 228px 29px 226px 30px 227px 55px / 43px 16px 621px 15px 55px;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve {
+  height: 228px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid {
+  display: -ms-grid;
+  display: grid;
+  width: 636px;
+  height: 228px;
+  -ms-grid-rows: 39px 32px 157px;
+  -ms-grid-columns: 13px 139px 26px 141px 122px 42px 20px 53px 8px 54px 18px;
+      grid-template: 39px 32px 157px / 13px 139px 26px 141px 122px 42px 20px 53px 8px 54px 18px;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #html5validation {
+  height: 157px;
+  width: 139px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #css3validation {
+  height: 157px;
+  width: 141px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #cnit133 {
+  height: 189px;
+  width: 42px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 6 / 4 / 7;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #cnit133:hover {
+  -webkit-box-shadow: 5px 5px 10px grey;
+          box-shadow: 5px 5px 10px grey;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #contact {
+  height: 189px;
+  width: 53px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 8 / 4 / 9;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #contact:hover {
+  -webkit-box-shadow: 5px 5px 10px grey;
+          box-shadow: 5px 5px 10px grey;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #aboutme {
+  height: 189px;
+  width: 54px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 10 / 4 / 11;
+}
+
+* body .grid .shelves .shelves_grid .top_shelve .top_shelve_grid #aboutme:hover {
+  -webkit-box-shadow: 5px 5px 10px grey;
+          box-shadow: 5px 5px 10px grey;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+* body .grid .shelves .shelves_grid .mid_shelve {
+  height: 226px;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+* body .grid .shelves .shelves_grid .mid_shelve .mid_shelve_grid {
+  display: -ms-grid;
+  display: grid;
+  width: 637px;
+  height: 226px;
+  -ms-grid-rows: 104px 122px;
+  -ms-grid-columns: 16px 473px 148px;
+      grid-template: 104px 122px / 16px 473px 148px;
+}
+
+* body .grid .shelves .shelves_grid .mid_shelve .mid_shelve_grid #hello {
+  width: 473px;
+  height: 112px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+* body .grid .shelves .shelves_grid .mid_shelve .mid_shelve_grid #hello img {
+  position: relative;
+  top: 10px;
+  width: 473px;
+  height: 112px;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve {
+  height: 227px;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 6 / 3 / 7 / 5;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid {
+  display: -ms-grid;
+  display: grid;
+  width: 636px;
+  height: 227px;
+  -ms-grid-rows: 124px 51px 52px;
+  -ms-grid-columns: 24px 22px 173px 53px 364px;
+      grid-template: 124px 51px 52px / 24px 22px 173px 53px 364px;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #bos {
+  width: 173px;
+  height: 51px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #bos img {
+  position: relative;
+  top: 7px;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #bos img:hover {
+  -webkit-box-shadow: 5px 5px 10px grey;
+          box-shadow: 5px 5px 10px grey;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #hers {
+  width: 248px;
+  height: 52px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #hers img {
+  position: relative;
+  top: 5px;
+}
+
+* body .grid .shelves .shelves_grid .bottom_shelve .bottom_shelve_grid #hers img:hover {
+  -webkit-box-shadow: 5px 5px 10px grey;
+          box-shadow: 5px 5px 10px grey;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+/*# sourceMappingURL=homepage.css.map */

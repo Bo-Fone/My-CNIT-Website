@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="description" content="Bo's CNIT 133 Homework 1." />
+        <meta name="keywords" content="Bo, Fone, CNIT, Website, 133, homework, 1" />
+        <meta name="author" content="Bo Fone" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./part3.css">
+        <link rel="stylesheet" href="../general.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Homework 2: Part 3</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Homework 2: Part 3</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../part1/index.html">Part 1</a></li>
+                <li><a href="../part2/index.html">Part 2</a></li>
+                <li><a href="./index.html">Part 3</a></li>
+                <li><a href="../part4/index.html">Part 4</a></li>
+                <li><a href="../extracredit/index.html">Extra Credit</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h5>Content</h5>
+            <form name="process">
+                <table>
+                    <tr>
+                        <td>First number:</td>
+                        <td><input type="text" name="firstNumber" required></td>
+                    </tr>
+                    <tr>
+                        <td>Second number:</td>
+                        <td><input type="text" name="secondNumber" required></td>
+                    </tr>
+                    <tr>
+                        <td>Third number:</td>
+                        <td><input type="text" name="thirdNumber" required></td>
+                    </tr>
+                    <tr>
+                        <td>Forth number:</td>
+                        <td><input type="text" name="forthNumber" required></td>
+                    </tr>
+                    <tr>
+                        <td>Fifth number:</td>
+                        <td><input type="text" name="fifthNumber" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="output" cols="30" rows="10" readonly></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" id="process">Process</button></td>
+                        <td><button type="reset">Reset</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button" id="toggle-result">Toggle Result</button></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <footer>
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                title="HTML5 Powered with CSS3 / Styling, and Semantics" usemap="#html5logomap" />
+
+            <map name="html5logomap">
+                <area shape="rect" coords="0,0,58,64" alt="HTML Validation" href="https://validator.w3.org/check?uri=referer" />
+                <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation" href="https://jigsaw.w3.org/css-validator/check/referer" />
+            </map>
+        </footer>
+
+        <script>
+            document.getElementById("process").onclick = function () {
+                process();
+            };
+
+            $(document).ready(function () {
+                $("#toggle-result").click(function () {
+                    $("textarea").fadeToggle();
+                })
+            })
+
+            function process() {
+                let num1, num2, num3, num4, num5;
+                let numArray;
+                let posNum = 0,
+                    negNum = 0,
+                    zero = 0;
+
+                num1 = parseInt(document.forms["process"].elements["firstNumber"].value);
+                num2 = parseInt(document.forms["process"].elements["secondNumber"].value);
+                num3 = parseInt(document.forms["process"].elements["thirdNumber"].value);
+                num4 = parseInt(document.forms["process"].elements["forthNumber"].value);
+                num5 = parseInt(document.forms["process"].elements["fifthNumber"].value);
+
+                numArray = [num1, num2, num3, num4, num5];
+
+                for (i = 0; i < numArray.length; i++) {
+                    if (numArray[i] < 0) {
+                        negNum++;
+                    } else if (numArray[i] > 0) {
+                        posNum++;
+                    } else {
+                        zero++;
+                    }
+                }
+
+                document.forms["process"].elements["output"].value = ("Occurrence of positive numbers: " + posNum +
+                    "\n" +
+                    "Occurrence of negative numbers: " + negNum + "\n" +
+                    "Occurrence of zeros: " + zero);
+            }
+        </script>
+
+    </body>
+
+</html>
