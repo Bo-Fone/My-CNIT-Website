@@ -14,25 +14,31 @@
         <link rel="stylesheet" href="css/main.css">
         <script>
             function drawSquare() {
-                var side = document.getElementById("input").value;
-                var squareString = "";
-                for (let i = 0; i < side; i++) {
-                    if (i === 0 || i === side - 1) {
-                        for (let j = 0; j < side; j++) {
-                            squareString += "*";
-                        }
-                        squareString += "\n";
-                    } else {
+        var side = document.getElementById("input").value;
+        var squareString = "";
+        if (side > 10 || side < 2) {
+            alert("Please enter a valid length.");
+        } else {
+            for (let i = 0; i < side; i++) {
+                if (i === 0 || i === side - 1) {
+                    for (let j = 0; j < side; j++) {
                         squareString += "*";
-                        for (let k = 0; k < side - 2; k++) {
-                            squareString += " ";
-                        }
-                        squareString += "*\n";
                     }
+                    squareString += "\n";
+                } else {
+                    squareString += "*";
+                    for (let k = 0; k < side - 2; k++) {
+                        squareString += " ";
+                    }
+                    squareString += "*\n";
                 }
-                document.getElementById("printTarget").innerHTML += "<section class='entry'><h4 class='title'>Output</h4><div><pre class='monospace'>" + squareString + "</pre></div></section>";
             }
-        </script>
+            document.getElementById("printTarget").innerHTML +=
+                "<section class='entry'><h4 class='title'>Output</h4><div><pre class='monospace'>" +
+                squareString + "</pre></div></section>";
+        }
+    }
+</script>
     </head>
 
     <body>
