@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Homework 4: Loops</title>
+        <title>Homework 4: Extra Credit</title>
         <meta name="description" content="Bo's CNIT 133 Homework 4.">
         <meta name="keywords" content="Bo, Fone, CNIT, Website, 133, homework, 4">
         <meta name="author" content="Bo Fone">
@@ -12,13 +12,34 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script defer>
+            function drawSquare() {
+                var side = document.getElementById("input").value;
+                var squareString = "";
+                for (let i = 0; i < side; i++) {
+                    if (i === 0 || i === side - 1) {
+                        for (let j = 0; j < side; j++) {
+                            squareString += "*";
+                        }
+                        squareString += "\n";
+                    } else {
+                        squareString += "*";
+                        for (let k = 0; k < side - 2; k++) {
+                            squareString += " ";
+                        }
+                        squareString += "*\n";
+                    }
+                }
+                document.getElementById("printTarget").innerHTML += "<section class='entry'><h4 class='title'>Output</h4><div><pre class='monospace'>" + squareString + "</pre></div></section>";
+            }
+        </script>
     </head>
 
     <body>
         <header class="heading">
             <h1>Homework 4: Loops</h1>
             <hr>
-            <h3>Homepage</h3>
+            <h3>Extra Credit</h3>
         </header>
 
         <nav>
@@ -30,16 +51,16 @@
             </ul>
         </nav>
 
-        <main class="window">
+        <main class="window" id="printTarget">
             <section class="entry">
-                <h3 class="title">Description</h3>
-                <p><strong>Part 1a: </strong>Using <em>for</em> loops to calculate the product and sum of every thrid
-                    integer from 5 to 20.</p>
-                <p><strong>Part 1b: </strong>Using <em>while</em> loops to calculate the product and sum of every forth
-                    integer from 3 to 31.</p>
-                <p><strong>Part 2: </strong>Display compound interest of a $1000 principal for interest rates of 5, 6,
-                    7, 8, 9 ,10 (%).</p>
-                <p><strong>Extra Credit: </strong>Display asterisk square as instructed by user input.</p>
+                <form>
+                    <fieldset>
+                        <legend>Input</legend>
+                        <label for="input">Type in a number between 2 and 10: </label>
+                        <input type="number" name="input" id="input" min="2" max="10">
+                        <input type="button" value="Draw" onclick="drawSquare()">
+                    </fieldset>
+                </form>
             </section>
         </main>
 
