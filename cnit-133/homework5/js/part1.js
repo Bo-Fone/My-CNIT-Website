@@ -5,11 +5,11 @@ function validateForm() {
         return false;
     } else if (document.form.gender[0].checked == false && document.form.gender[1].checked == false) {
         alert("Please choose your gender.");
-        document.getElementById("gender").focus();
+        document.getElementById("female").focus();
         return false;
-    } else if (document.form.size.checked == false) {
+    } else if (document.form.size[0].checked == false && document.form.size[1].checked == false && document.form.size[2].checked == false) {
         alert("Please choose your size.");
-        document.getElementById("size").focus();
+        document.getElementById("short").focus();
         return false;
     } else if (document.form.type.selectedIndex == 0) {
         alert("Please choose a type.");
