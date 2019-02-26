@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Homework 3: Part 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bo's CNIT 133 Homework 3.">
+        <meta name="keywords" content="Bo, Fone, CNIT, Website, 133, homework, 3">
+        <meta name="author" content="Bo Fone">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/part3.js"></script>
+    </head>
+
+    <body>
+
+        <header class="heading">
+            <h1>Homework 3: Functions</h1>
+            <hr>
+            <h3>Part 3</h3>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html" class="menu-anchor">Home</a></li>
+                <li><a href="part1.html" class="menu-anchor">Part 1</a></li>
+                <li><a href="part2.html" class="menu-anchor">Part 2</a></li>
+                <li><a href="part3.html" class="menu-anchor">Part 3</a></li>
+                <li><a href="part4.html" class="menu-anchor">Part 4</a></li>
+            </ul>
+        </nav>
+
+        <main class="window">
+            <section class="entry">
+                <h3 class="title">Temperature Convertor</h3>
+                <form onsubmit="return false">
+                    <table>
+                        <tr>
+                            <td>Celsius</td>
+                            <td>Fahrenheit</td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cel" id="cel"></td>
+                            <td><input type="number" name="fah" id="fah"></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" onclick="converter('fah')">Cº to Fº</button></td>
+                            <td><button type="submit" onclick="converter('cel')">Fº to Cº</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+        </main>
+
+        <footer class="bottom-floating-footer">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                title="HTML5 Powered with CSS3 / Styling, and Semantics" usemap="#html5logomap" class="center-block grayscale" />
+
+            <map name="html5logomap">
+                <area shape="rect" coords="0,0,58,64" alt="HTML Validation" href="https://validator.w3.org/check?uri=referer" />
+                <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation" href="https://jigsaw.w3.org/css-validator/check/referer" />
+            </map>
+        </footer>
+    </body>
+
+</html>
