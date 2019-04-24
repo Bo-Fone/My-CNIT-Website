@@ -26,7 +26,6 @@ function process() {
                 "</html>"
             );
             document.form.searchchar.value = "";
-            document.form.textblock.value = "";
             newWindow.focus();
         } else {
             document.form.result.value = occurNum;

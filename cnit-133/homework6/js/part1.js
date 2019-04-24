@@ -11,7 +11,7 @@ function process() {
         document.getElementById("number").readOnly = true;
 
     } else {
-        alert("Please fill in the correct format.");
+        alert("Please fill in a number that has at least four decimal places.");
         document.getElementById("number").focus();
     }
 }
