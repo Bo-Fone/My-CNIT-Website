@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="description" content="Bo's CNIT 133 Homework 7." />
+        <meta name="keywords" content="Bo, Fone, CNIT, Website, 133, homework, 7" />
+        <meta name="author" content="Bo Fone" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Homework 7: Object Model and Miscellaneous jQuery</title>
+
+        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/part1.js"></script>
+    </head>
+
+    <body>
+        <header class="heading">
+            <h1>Homework 7: Object Model and Miscellaneous jQuery</h1>
+            <hr>
+            <h3>Part 1</h3>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html" class="menu-anchor">Home</a></li>
+                <li><a href="part1.html" class="menu-anchor">Part 1</a></li>
+                <li><a href="part2.html" class="menu-anchor">Part 2</a></li>
+                <li><a href="part3.html" class="menu-anchor">Part 3</a></li>
+            </ul>
+        </nav>
+
+        <main class="window">
+            <section class="entry">
+                <h3 class="title">Optional Page Styles</h3>
+                <form action="form">
+                    <table class="tables">
+                        <th>
+                            <tr>
+                                <td><input type="radio" name="theme" id="light" value="light" checked
+                                        onclick="changeTheme()"><label for="light">Plain
+                                        Bright</label>
+                                </td>
+                                <td><input type="radio" name="theme" id="dark" value="dark"
+                                        onclick="changeTheme()"><label for="dark">Just
+                                        Black</label></td>
+                            </tr>
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td><label for="font-family">Font Family</label></td>
+                                <td><select name="font-family" id="font-family" onchange="changeFontFamily()">
+                                        <option value="default">Default</option>
+                                        <option value="josefin">Josefin Sans</option>
+                                        <option value="cinzel">Cinzel</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><label for="font-weight">Font Weight</label></td>
+                                <td><select name="font-weight" id="font-weight" onchange="changeFontWeight()">
+                                        <option value="100">100</option>
+                                        <option value="300">300</option>
+                                        <option value="400" selected>400</option>
+                                        <option value="600">600</option>
+                                        <option value="700">700</option>
+                                        <option value="900">900</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><label for="font-style">Font Style</label></td>
+                                <td>
+                                    <input type="range" name="font-style" id="font-style" list="ticklist" min="-90"
+                                        max="90" step="1" onchange="changeFontStyle()">
+                                    <datalist id="ticklist">
+                                        <option value="-90" label="-90">
+                                        <option value="-60">
+                                        <option value="-30">
+                                        <option value="0" label="0">
+                                        <option value="30">
+                                        <option value="60">
+                                        <option value="90" label="90">
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" id="increase" onclick="increaseFontSize()">Size +</button>
+                                </td>
+                                <td><button type="button" id="decrease" onclick="decreaseFontSize()">Size -</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div>
+                    <p id="font-style-target">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eaque
+                        consequuntur a quaerat nobis
+                        esse dolor reprehenderit iste corporis nostrum impedit exercitationem, officiis unde tempora
+                        fuga mollitia nisi velit ipsam! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Reprehenderit minima tenetur quos vero eligendi dolorum at enim voluptates non sequi repellendus
+                        animi, voluptas neque adipisci vitae, ratione quibusdam porro voluptatibus.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bottom-floating-footer">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png"
+                alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                title="HTML5 Powered with CSS3 / Styling, and Semantics" usemap="#html5logomap"
+                class="center-block grayscale" />
+
+            <map name="html5logomap">
+                <area shape="rect" coords="0,0,58,64" alt="HTML Validation"
+                    href="https://validator.w3.org/check?uri=referer" />
+                <area shape="rect" coords="58,0,99,64" alt="CSS3 Validation"
+                    href="https://jigsaw.w3.org/css-validator/check/referer" />
+            </map>
+        </footer>
+    </body>
+
+</html>

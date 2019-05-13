@@ -1,0 +1,20 @@
+{
+  "name": "homework7",
+  "version": "1.0.0",
+  "description": "Homework 7 for CNIT-133",
+  "main": "index.html",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "homework",
+    "7"
+  ],
+  "author": "Bo Fone",
+  "license": "MIT",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
+  }
+}
