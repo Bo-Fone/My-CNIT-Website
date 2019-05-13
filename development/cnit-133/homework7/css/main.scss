@@ -389,7 +389,7 @@ blockquote {
 }
 
 @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
-    p::first-letter {
+    p:not(.dropdown-item)::first-letter {
         initial-letter: 2;
         -webkit-initial-letter: 2;
         color: gray;
