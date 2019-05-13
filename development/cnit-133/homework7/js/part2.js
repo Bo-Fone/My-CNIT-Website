@@ -1,8 +1,8 @@
 let dropDownMenu = document.getElementsByClassName('dropdown');
 
 function dropDown(index, event) {
-    let x = event.clientX;
-    let y = event.clientY;
+    let x = event.clientX + 20;
+    let y = event.clientY + 20;
     clearDropDown();
 
     switch (index) {
