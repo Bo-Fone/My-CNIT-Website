@@ -160,7 +160,7 @@ textarea {
     }
 
     img:hover {
-        box-shadow: 10px 10px 10px black;
+        box-shadow: 10px 10px 10px grey;
         transform: scale(1.1, 1.1);
     }
 }
@@ -169,10 +169,10 @@ textarea {
     display: none;
     position: absolute;
     border: 1px dotted gray;
-    background-color: lightgrey;
+    background-color: white;
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .heading,
