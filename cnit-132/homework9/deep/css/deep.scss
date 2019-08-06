@@ -1,0 +1,118 @@
+/** Import Resources **/
+
+@import 'glitch';
+@font-face {
+    font-family: 'MatrixCodeNFI';
+    src: url('../font/MatrixCodeNFI.woff') format('woff'), url('../font/MatrixCodeNFI.ttf') format('truetype'), url('../font/MatrixCodeNFI.svg#MatrixCodeNFI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'matrix code nfi';
+    src: url('../font/matrix code nfi.eot');
+    src: url('../font/matrix code nfi.woff2') format('woff2'), url('../font/matrix code nfi.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** Variables **/
+
+$terminal-green: #33FF00;
+$terminal-light-green: #9DFF85;
+/** Lists **/
+
+/** Maps **/
+
+/** Mixins **/
+
+@mixin dimension($width,
+$height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin resetBox() {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin hardCenter() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** Tag Styling **/
+
+body {
+    background-image: url(../pictures/noise.gif);
+    @include resetBox();
+    .noise {
+        @include dimension(100vw,
+        100vh);
+        min-width: 740px;
+        min-height: 500px;
+        background-color: black;
+        opacity: 0.85;
+    }
+    .container {
+        @include dimension(740px,
+        500px);
+        @include hardCenter();
+        .solid {
+            @include dimension(720px,
+            480px);
+            @include hardCenter();
+            background-color: black;
+            opacity: 0.5;
+        }
+        .terminal {
+            @include dimension(720px,
+            480px);
+            @include hardCenter();
+            border: 10px ridge white;
+            .terminal-pane {
+                @include dimension(714px,
+                474px);
+                margin: 0;
+                border: 3px dotted $terminal-green;
+                color: $terminal-green;
+                box-shadow: 0 0 1px $terminal-light-green, 0 0 3px $terminal-light-green, 0 0 5px $terminal-light-green, 0 0 10px $terminal-light-green;
+                .dialog-pane {
+                    font-family: 'MatrixCodeNFI', 'matrix code nfi', Monaco;
+                    text-shadow: 0 0 1px $terminal-green, 0 0 3px $terminal-green, 0 0 5px $terminal-green, 0 0 10px $terminal-light-green;
+                    font-size: 25px;
+                    #dialog {
+                        list-style: none;
+                        li {
+                            margin-bottom: 30px;
+                            .message {
+                                @include textGlitch("message",
+                                5,
+                                $terminal-green,
+                                transparent,
+                                $terminal-green,
+                                $terminal-green,
+                                1000,
+                                20);
+                                input {
+                                    background-color: transparent;
+                                    color: $terminal-green;
+                                    font-family: 'MatrixCodeNFI', 'matrix code nfi', Monaco;
+                                    text-shadow: 0 0 1px $terminal-green, 0 0 3px $terminal-green, 0 0 5px $terminal-green, 0 0 10px $terminal-light-green;
+                                    font-size: 25px;
+                                    border: 0;
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

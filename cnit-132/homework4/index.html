@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- This homework is to demonstrate html and css graphics skill. I choose to make a draft website for my own hosted minecraft server.
+        Author: Bo Fone
+        Created by: Mar 18, 2018 -->
+        <meta name="description" content="Minetizen" />
+        <meta name="keywords" content="minecraft, minetizen, survival, towny" />
+        <meta name="author" content="Bo Fone" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="../reset.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="./minetizen.css" />
+        <script src="./js/index.js"></script>
+        <title>Minetizen</title>
+    </head>
+
+    <body>
+        <div class="content w3-animate-opacity" style="animation-duration:3s;">
+            <header>
+                <div class="logo">
+                    <img src="./pictures/logo.png" alt="Minetizen logo." />
+                </div>
+            </header>
+
+            <nav>
+                <ul>
+                    <li onclick="openTab(event,  'home')" style="background:url(./pictures/button_pressed.png) no-repeat center; color:#FFDE57"
+                        class="nav-button">
+                        HOME
+                    </li>
+                    <li onclick="openTab(event, 'world')" class="nav-button">
+                        WORLD
+                    </li>
+                    <li onclick="openTab(event, 'enlist')" class="nav-button">
+                        ENLIST
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="info">
+                <div id="home" class="tabs w3-animate-opacity">
+                    <img src="./pictures/minetizen_badge.png" alt="A badge logo of Minetizen." onclick="window.open('./gallery.html','_self')"
+                    />
+                    <h3>A Life in Minetizen</h3>
+                    <p>
+                        &#60;- Click the badge to see a gallery of photos from the game. [Game Description Here] Minetizen started as my personal
+                        project from the day I discovered the unimaginable potential power of a truely sandboxed art piece...
+                        [More Game Description Follows].
+                    </p>
+                </div>
+
+                <div id="world" class="tabs w3-animate-opacity">
+                    <img src="./pictures/minetizen_map_thumbnail.png" alt="A thumbnail of Minetizen maps." onclick="window.open('./the_world.html','_self')"
+                    />
+                    <h3>A World of Excitement</h3>
+                    <p>
+                        Click the scroll paper map icon to see a map of the central territory of Minetizen. [More Description Here] Our community
+                        of players have explored hundreds and thousands miles of in-game land to reach beyond impossible...[More
+                        Description Here]
+                    </p>
+                </div>
+
+                <div id="enlist" class="tabs w3-animate-opacity">
+                    <form method="POST" action="./enlist.php">
+                        <fieldset>
+                            <legend>Enlist Me</legend>
+                            <ul>
+                                <li>
+                                    <label>
+                                        My Minecraft Player Name
+                                        <em>*</em>:
+                                        <input type="text" name="playername" size="16" maxlength="16" placeholder="Steve" required />
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        My Favorite Play Mode
+                                        <em>*</em>:
+                                        <select name="favplaymode" required />
+                                        <option value="Survival" selected>Survival</option>
+                                        <option value="Creation">Creation</option>
+                                        <option value="PVP">PVP</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        My age is between
+                                        <em>*</em>:
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="radio" name="age" value="8-12" required />8 ~ 12
+                                                </td>
+                                                <td>
+                                                    <input type="radio" name="age" value="13-18" />13 ~ 18
+                                                </td>
+                                                <td>
+                                                    <input type="radio" name="age" value="19-24" />19 ~ 24
+                                                </td>
+                                                <td>
+                                                    <input type="radio" name="age" value="25+" />25+
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        I like to become:
+                                        <input type="hidden" name="path[]" value />
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="King" />King
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Mayor" />Mayor
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Hermit" />Hermit
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Merchant" />Merchant
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Explorer" />Explorer
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Farmer" />Farmer
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Miner" />Miner
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="path[]" value="Omnipotent" />Omnipotent
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        My Motto:
+                                        <textarea name="motto" rows="1" cols="80" placeholder="Violent delights have violent ends!"></textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Submit" />
+                                    </td>
+                                    <td>
+                                        <input type="reset" value="Reset" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                    <img src="./pictures/enlistme.gif" alt="Click me to download the game." onclick="window.open('./download.html','target=_new','toolbar=0,menubar=0,scrollbars=0,status=0,resizable=1,top=200px,left=500px,fullscreen=0,Height=570px,Width=400px')"
+                    />
+                </div>
+            </section>
+        </div>
+
+        <div class="background">
+            <div id="cube">
+                <figure class="back">
+                    <img src="./pictures/background/back.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="right">
+                    <img src="./pictures/background/right.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="front">
+                    <img src="./pictures/background/front.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="left">
+                    <img src="./pictures/background/left.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="top">
+                    <img src="./pictures/background/top.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="bottom">
+                    <img src="./pictures/background/bottom.png" alt="Panoramic background image." />
+                </figure>
+            </div>
+        </div>
+
+        <footer class="w3-animate-opacity" style="animation-duration:5s;">
+            <figure>
+                <a href="https://validator.w3.org/check?uri=referer">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" alt="HTML5 Powered" title="HTML5 Powered" class="w3-hover-sepia"
+                        onclick="window.open('https://jigsaw.w3.org/css-validator/check/referer', 'target=_blank')" />
+                </a>
+            </figure>
+            <div>
+                <button type="button" onclick="musicControl()" id="music_button">
+                </button>
+            </div>
+            <audio autoplay id="music">
+                <source src="./sound/background_music.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+            </audio>
+        </footer>
+    </body>
+
+</html>

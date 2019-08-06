@@ -1,0 +1,156 @@
+/* NAVIGATION */
+ul#mainNav {
+    
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 160px;
+    
+}
+#mainNav li {
+    float: left;
+    width: 12em;
+}
+
+#mainNav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 11px;
+    border: 1px dashed #999999;
+    border-bottom: none;
+    display: block;
+    padding: 7px 5px 2px 30px;
+    background: #E7E7E7 url(link.png) no-repeat left center;
+}
+
+#mainNav a:hover {
+    font-weight: bold;
+    background: #B2F511 url(go.png) no-repeat 5px 50%;
+}
+
+/* special formatting for home page link */
+a#homeLink {
+    background: #E7E7E7 url(home.png) no-repeat 5px 52%;
+}
+
+.content {
+    width: 80%;
+    height: 680px;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: lightgrey;
+    box-shadow: 1px 1px 10px grey;
+}
+
+nav {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 5px;
+    background-color: lightslategray;
+    border: dotted;
+}
+
+header h1 {
+    text-align: center;
+    font-family: "Josefin Sans";
+    color: white;
+}
+
+section {
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 1%;
+    float: left;
+    background-color: lightblue;
+    border: dotted 2px;
+}
+
+section h3 {
+    padding-left: 5%;
+    color: darkcyan;
+    font-family: Impact;
+    text-transform: uppercase;
+}
+
+section p {
+    padding-left: 5%;
+    color: darkblue;
+}
+
+aside {
+    display: inline-block;
+    width: 18.5%;
+    height: 45%;
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: white;
+    border: dotted 2px;
+}
+
+aside h4 {
+    text-align: center;
+    font-family: cursive;
+}
+
+article {
+    position: relative;
+    top: -29%;
+    width: 60%;
+    height: 27%;
+    margin-left: 10%;
+    margin-top: 1%;
+    background-color: lightcoral;
+    border: dotted 2px;
+    overflow: scroll;
+}
+
+article h3 {
+    font-family: Arial;
+    padding-left: 5%;
+}
+
+article p {
+    font-family: monospace;
+    line-height: 9pt;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+article a {
+    padding-left: 5%;
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    position: relative;
+    top: -27%;
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    padding-top: 3%;
+    background-color: darkgray;
+    text-align: center;
+}
+
+footer a {
+    display: block;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.center {
+    margin-top: 20px;
+    text-align: center;
+}

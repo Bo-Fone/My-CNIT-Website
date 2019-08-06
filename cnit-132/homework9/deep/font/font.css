@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'MatrixCodeNFI';
+  src: url('MatrixCodeNFI.woff') format('woff'),
+       url('MatrixCodeNFI.ttf') format('truetype'),
+       url('MatrixCodeNFI.svg#MatrixCodeNFI') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'matrix code nfi';
+  src: url('matrix code nfi.eot');
+  src: url('matrix code nfi.woff2') format('woff2'),
+       url('matrix code nfi.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

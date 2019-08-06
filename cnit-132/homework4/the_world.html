@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta name="description" content="Minetizen Geology" />
+        <meta name="keywords" content="minecraft, minetizen, survival, towny, picture, photo, gallery, geology, map, world" />
+        <meta name="author" content="Bo Fone" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="../reset.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="./world.css" />
+        <script src="./js/world.js"></script>
+        <title>Minetizen: World</title>
+    </head>
+
+    <body>
+        <div class="content w3-animate-opacity" style="animation-duration:3s;">
+            <header>
+                <div class="logo">
+                    <a href="./index.html" target="_self">
+                        <img src="./pictures/world.png" alt="World map logo." />
+                    </a>
+                </div>
+            </header>
+
+            <section class="gallery">
+                <div class="w3-content w3-display-container w3-animate-opacity">
+                    <img class="mySlides w3-animate-opacity w3-round" src="./pictures/world_map.png" alt="World overview." style="display:block;"
+                        usemap="#overview" />
+                    <img class="mySlides w3-animate-opacity w3-round" src="./pictures/world_map_2.png" alt="World zoomed-in view." usemap="#overview_zoomed"
+                    />
+                    <figure id="slide_button" class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
+                        <figure class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</figure>
+                        <figure class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</figure>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    </figure>
+                </div>
+                <map name="overview" id="overview">
+                    <area alt="Click to see pictures of Dragurion Nation" title="Dragurion Nation" href="./gallery.html" shape="poly" coords="354,138,402,153,411,205,386,230,370,267,333,270,313,219,283,194,289,161,322,165,340,156"
+                    />
+                    <area alt="Click to see pictures of the Starter Village" title="The Starter Village" href="./gallery.html" shape="poly" coords="311,103,293,111,287,133,291,148,300,156,315,161,328,156,340,142,345,127,339,115,328,105"
+                    />
+                </map>
+                <map name="overview_zoomed" id="overview_zoomed">
+                    <area alt="Click to see pictures of the Crown." title="The Crown" href="./gallery.html" shape="poly" coords="291,193,333,214,337,230,328,239,332,249,345,251,332,260,301,250,286,257,272,247,264,254,245,235,253,216,284,211"
+                    />
+                    <area alt="Click to see pictures of the Old Town." title="Old Town" href="./gallery.html" shape="poly" coords="311,122,297,102,280,116,277,142,271,169,287,189,333,202,349,176,326,158,325,120"
+                    />
+                    <area alt="Click to see pictures of the New Town" title="New Town" href="./gallery.html" shape="poly" coords="343,109,390,127,408,163,394,175,413,186,416,217,367,263,388,279,368,299,345,321,328,341,315,352,304,313,323,299,338,273,346,246,335,239,341,198,350,169,336,165,328,157,326,121"
+                    />
+                    <area alt="Click to see pictures of the Southern Bay" title="The Southern Bay" href="./gallery.html" shape="poly" coords="286,258,268,248,263,286,257,319,248,341,271,355,317,357,298,320,309,303,324,302,334,265,302,252"
+                    />
+                    <area alt="Click to see pictures of the Citadel." title="Citadel" href="./gallery.html" shape="poly" coords="253,215,222,258,171,235,165,187,166,145,187,134,256,148,275,121,279,145,266,160,288,188,285,210,266,222"
+                    />
+                    <area alt="Click to see pictures of the Eastern Island" title="The Eastern Island" href="./gallery.html" shape="rect" coords="238,76,271,101"
+                    />
+                    <area alt="Click to see pictures of the Mine" title="The Mine" href="./gallery.html" shape="poly" coords="248,124,231,113,217,100,218,129,248,134"
+                    />
+                    <area alt="Click to see pictures of the Windmill Island" title="Windmill Island" href="./gallery.html" shape="rect" coords="182,80,206,103"
+                    />
+                    <area alt="Click to see the Northern Island" title="The Northern Island" href="./gallery.html" shape="rect" coords="199,43,251,70"
+                    />
+                </map>
+            </section>
+        </div>
+
+        <div class="background">
+            <div id="cube">
+                <figure class="back">
+                    <img src="./pictures/background/back.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="right">
+                    <img src="./pictures/background/right.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="front">
+                    <img src="./pictures/background/front.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="left">
+                    <img src="./pictures/background/left.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="top">
+                    <img src="./pictures/background/top.png" alt="Panoramic background image." />
+                </figure>
+                <figure class="bottom">
+                    <img src="./pictures/background/bottom.png" alt="Panoramic background image." />
+                </figure>
+            </div>
+        </div>
+
+        <footer class="w3-animate-opacity" style="animation-duration:5s;">
+            <figure>
+                <a href="https://validator.w3.org/check?uri=referer">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" alt="HTML5 Powered" title="HTML5 Powered" class="w3-hover-sepia"
+                        onclick="window.open('https://jigsaw.w3.org/css-validator/check/referer', 'target=_blank')" />
+                </a>
+            </figure>
+            <div>
+                <button type="button" onclick="musicControl()" id="music_button">
+                </button>
+            </div>
+            <audio autoplay id="music">
+                <source src="./sound/background_music.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+            </audio>
+
+        </footer>
+    </body>
+
+</html>

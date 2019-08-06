@@ -1,0 +1,285 @@
+/** Import Resources **/
+/* latin */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Press Start 2P Regular"), local("PressStart2P-Regular"), url(https://fonts.gstatic.com/s/pressstart2p/v6/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/** Variables **/
+/** Lists **/
+/** Maps **/
+/** Mixins **/
+/** Tag Styling **/
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../pictures/desktop_texture.png);
+}
+
+body .container {
+  margin: 0;
+  padding: 0;
+}
+
+body .container .content {
+  margin: 0;
+  padding: 0;
+}
+
+body .container .content .menu-bar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 25px;
+  min-width: 600px;
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+body .container .content .menu-bar .menu-bar-content {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 25px;
+  list-style: none;
+}
+
+body .container .content .menu-bar .menu-bar-content .menu-bar-item {
+  width: 98px;
+  height: 23px;
+  float: left;
+  border: 1px solid white;
+}
+
+body .container .content .menu-bar .menu-bar-content .menu-bar-item:hover {
+  cursor: pointer;
+}
+
+body .container .content .menu-bar .menu-bar-content .menu-bar-item h6 {
+  text-align: center;
+  width: 80px;
+  height: 15px;
+  margin: 5px auto;
+}
+
+body .container .content .menu-bar .menu-bar-content .bar-item-visible {
+  border: 1px inset;
+  background-color: gray;
+}
+
+body .container .content .menu-content {
+  margin-top: 0;
+}
+
+body .container .content .menu-content .menu {
+  display: none;
+  position: absolute;
+  margin-top: 0;
+  background-color: white;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-left: 1px solid black;
+}
+
+body .container .content .menu-content .menu ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+body .container .content .menu-content .menu ul li {
+  height: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+body .container .content .menu-content .menu ul li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+body .container .content .menu-content .menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+body .container .content .menu-content .menu ul li #html5-logo {
+  float: right;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+body .container .content .menu-content .menu ul li #css3-logo {
+  float: right;
+  margin-top: 3px;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+}
+
+body .container .content .menu-content .menu-visible {
+  display: block;
+}
+
+body .container .content .menu-content #file-menu {
+  width: 168px;
+}
+
+body .container .content .menu-content #edit-menu {
+  width: 138px;
+  left: 100px;
+}
+
+body .container .content .menu-content #view-menu {
+  left: 200px;
+  width: 118px;
+}
+
+body .container .content .menu-content #window-menu {
+  left: 300px;
+  width: 278px;
+}
+
+body .container .content .menu-content #help-menu {
+  left: 400px;
+  width: 198px;
+}
+
+body .desktop {
+  min-width: 600px;
+}
+
+body .desktop .desktop-content {
+  min-width: 600px;
+}
+
+body .desktop .desktop-content .shortcut {
+  width: 100px;
+  margin-top: 10px;
+  float: right;
+  clear: both;
+}
+
+body .desktop .desktop-content .shortcut img {
+  display: block;
+  width: 55px;
+  margin: 0 auto;
+  border: 1px solid transparent;
+}
+
+body .desktop .desktop-content .shortcut p {
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+  border: 1px solid transparent;
+}
+
+body .desktop .desktop-content .shortcut p:hover {
+  cursor: default;
+}
+
+body .desktop .desktop-content .shortcut-selected img {
+  border: 1px dotted black;
+  filter: invert(100%);
+  background-color: white;
+}
+
+body .desktop .desktop-content .shortcut-selected p {
+  border: 1px dotted white;
+  color: white;
+  background-color: black;
+}
+
+body i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  margin-right: 8px;
+  float: right;
+}
+
+body .right {
+  transform: rotate(-45deg);
+}
+
+body .context-menu-activated {
+  display: block;
+}
+
+body .general-context-menu {
+  display: none;
+  position: absolute;
+  width: 218px;
+  background-color: white;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+body .general-context-menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body .general-context-menu ul li {
+  margin: 5px 5px;
+}
+
+body .general-context-menu ul li:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+body .file-context-menu {
+  display: none;
+  position: absolute;
+  width: 228px;
+  background-color: white;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+body .file-context-menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body .file-context-menu ul li {
+  margin: 5px 5px;
+}
+
+body .file-context-menu ul li:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+body div {
+  font-family: 'Press Start 2P', cursive;
+}
+
+body div p {
+  font-size: 15px;
+}
+
+body #connect-button {
+  width: 100px;
+  height: 40px;
+  float: right;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border-radius: 0;
+  background-color: lightgray;
+}
+
+body #connect-button:hover {
+  cursor: pointer;
+}

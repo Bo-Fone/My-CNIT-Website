@@ -1,0 +1,170 @@
+/** Import Resources **/
+@font-face {
+  font-family: 'MatrixCodeNFI';
+  src: url("../font/MatrixCodeNFI.woff") format("woff"), url("../font/MatrixCodeNFI.ttf") format("truetype"), url("../font/MatrixCodeNFI.svg#MatrixCodeNFI") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'matrix code nfi';
+  src: url("../font/matrix code nfi.eot");
+  src: url("../font/matrix code nfi.woff2") format("woff2"), url("../font/matrix code nfi.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** Variables **/
+/** Lists **/
+/** Maps **/
+/** Mixins **/
+/** Tag Styling **/
+body {
+  background-image: url(../pictures/noise.gif);
+  margin: 0;
+  padding: 0;
+}
+
+body .noise {
+  width: 100vw;
+  height: 100vh;
+  min-width: 740px;
+  min-height: 500px;
+  background-color: black;
+  opacity: 0.85;
+}
+
+body .container {
+  width: 740px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body .container .solid {
+  width: 720px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  opacity: 0.5;
+}
+
+body .container .terminal {
+  width: 720px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px ridge white;
+}
+
+body .container .terminal .terminal-pane {
+  width: 714px;
+  height: 474px;
+  margin: 0;
+  border: 3px dotted #33FF00;
+  color: #33FF00;
+  box-shadow: 0 0 1px #9DFF85, 0 0 3px #9DFF85, 0 0 5px #9DFF85, 0 0 10px #9DFF85;
+}
+
+body .container .terminal .terminal-pane .dialog-pane {
+  font-family: 'MatrixCodeNFI', 'matrix code nfi', Monaco;
+  text-shadow: 0 0 1px #33FF00, 0 0 3px #33FF00, 0 0 5px #33FF00, 0 0 10px #9DFF85;
+  font-size: 25px;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog {
+  list-style: none;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li {
+  margin-bottom: 30px;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message {
+  color: #33FF00;
+  position: relative;
+}
+
+@keyframes message-anim-1 {
+  0% {
+    clip: rect(3px, 1000px, 6px, 0);
+  }
+  20% {
+    clip: rect(2px, 1000px, 13px, 0);
+  }
+  40% {
+    clip: rect(14px, 1000px, 10px, 0);
+  }
+  60% {
+    clip: rect(17px, 1000px, 10px, 0);
+  }
+  80% {
+    clip: rect(15px, 1000px, 2px, 0);
+  }
+  100% {
+    clip: rect(12px, 1000px, 11px, 0);
+  }
+}
+
+@keyframes message-anim-2 {
+  0% {
+    clip: rect(4px, 1000px, 1px, 0);
+  }
+  20% {
+    clip: rect(20px, 1000px, 2px, 0);
+  }
+  40% {
+    clip: rect(1px, 1000px, 4px, 0);
+  }
+  60% {
+    clip: rect(2px, 1000px, 11px, 0);
+  }
+  80% {
+    clip: rect(12px, 1000px, 15px, 0);
+  }
+  100% {
+    clip: rect(15px, 1000px, 15px, 0);
+  }
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message:before, body .container .terminal .terminal-pane .dialog-pane #dialog li .message:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  clip: rect(0, 0, 0, 0);
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message:after {
+  left: 2px;
+  text-shadow: -1px 0 #33FF00;
+  animation: message-anim-1 2s infinite linear alternate-reverse;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message:before {
+  left: -2px;
+  text-shadow: 2px 0 #33FF00;
+  animation: message-anim-2 3s infinite linear alternate-reverse;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message input {
+  background-color: transparent;
+  color: #33FF00;
+  font-family: 'MatrixCodeNFI', 'matrix code nfi', Monaco;
+  text-shadow: 0 0 1px #33FF00, 0 0 3px #33FF00, 0 0 5px #33FF00, 0 0 10px #9DFF85;
+  font-size: 25px;
+  border: 0;
+}
+
+body .container .terminal .terminal-pane .dialog-pane #dialog li .message input:focus {
+  outline: none;
+}

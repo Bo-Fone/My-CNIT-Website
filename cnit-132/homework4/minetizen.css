@@ -1,0 +1,324 @@
+/* latin */
+@font-face {
+  font-family: 'Averia Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Averia Libre Regular"), local("AveriaLibre-Regular"), url(https://fonts.gstatic.com/s/averialibre/v6/2V0aKIcMGZEnV6xygz7eNjESBanIRWbh8g.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(1440deg);
+    transform: rotateY(1440deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(1440deg);
+    transform: rotateY(1440deg);
+  }
+}
+
+body .content {
+  position: relative;
+  z-index: 1;
+  margin: 10vh auto;
+  width: 1280px;
+  height: 800px;
+}
+
+body .content header {
+  width: 1280px;
+  height: 157px;
+}
+
+body .content header .logo {
+  margin: 0 auto;
+  width: 761px;
+  height: 157px;
+}
+
+body .content nav {
+  width: 1280px;
+  height: 100px;
+}
+
+body .content nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px auto;
+  width: 900px;
+  height: 50px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body .content nav ul li {
+  background: url(./pictures/button.png) no-repeat center;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding-top: 11px;
+  font-family: 'Averia Libre', cursive;
+  font-size: 18px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+body .content nav ul li:hover {
+  cursor: pointer;
+}
+
+body .content .info {
+  padding-left: 140px;
+  padding-right: 140px;
+  background: url(./pictures/scroll_paper.png) no-repeat center;
+  width: 1280px;
+  height: 500px;
+}
+
+body .content .info div {
+  margin: 50px auto;
+  padding: 50px 150px;
+  width: 1000px;
+  height: 400px;
+  font-family: 'Averia Libre', cursive;
+  font-size: 24px;
+  color: white;
+}
+
+body .content .info div h3 {
+  font-family: 'Averia Libre', cursive;
+  font-size: 36px;
+}
+
+body .content .info .tabs {
+  position: absolute;
+}
+
+body .content .info #home img {
+  margin-right: 20px;
+  float: left;
+}
+
+body .content .info #home img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+body .content .info #world {
+  display: none;
+}
+
+body .content .info #world img {
+  width: 200px;
+  margin-left: 20px;
+  float: right;
+}
+
+body .content .info #world img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+body .content .info #enlist {
+  display: none;
+  padding-top: 0;
+}
+
+body .content .info #enlist form fieldset legend {
+  font-size: 24px;
+}
+
+body .content .info #enlist form fieldset label {
+  font-size: 18px;
+}
+
+body .content .info #enlist form fieldset input {
+  font-size: 12px;
+}
+
+body .content .info #enlist form fieldset em {
+  color: lightcoral;
+}
+
+body .content .info #enlist form fieldset table {
+  margin: 0 auto;
+}
+
+body .content .info #enlist form fieldset table td {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+body .content .info #enlist form fieldset h3 {
+  color: lightcoral;
+}
+
+body .content .info #enlist form fieldset b {
+  color: lightslategray;
+}
+
+body .content .info #enlist img {
+  position: absolute;
+  top: 5px;
+  right: 175px;
+  display: block;
+  width: 125px;
+  margin: 20px auto;
+}
+
+body .content .info #enlist img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+body .background {
+  z-index: -1;
+  position: fixed;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translate(450px, -1000px);
+  transform: translate(450px, -1000px);
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  width: 1000px;
+  height: 1000px;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  opacity: 0.9;
+}
+
+body .background #cube {
+  position: absolute;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-duration: 960s;
+  animation-duration: 960s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  width: 100%;
+  height: 100%;
+}
+
+body .background #cube figure {
+  margin: 0;
+  width: 1000px;
+  height: 1000px;
+  display: block;
+  position: absolute;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+body .background #cube figure img {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: scale(2, 2);
+  transform: scale(2, 2);
+  width: 1000px;
+  height: 1000px;
+}
+
+body .background #cube .back {
+  -webkit-transform: translateZ(-1000px);
+  transform: translateZ(-1000px);
+}
+
+body .background #cube .front {
+  -webkit-transform: rotateY(180deg) translateZ(-1000px);
+  transform: rotateY(180deg) translateZ(-1000px);
+}
+
+body .background #cube .left {
+  -webkit-transform: rotateY(90deg) translateZ(-1000px);
+  transform: rotateY(90deg) translateZ(-1000px);
+}
+
+body .background #cube .right {
+  -webkit-transform: rotateY(-90deg) translateZ(-1000px);
+  transform: rotateY(-90deg) translateZ(-1000px);
+}
+
+body .background #cube .top {
+  -webkit-transform: rotateX(-90deg) translateZ(-1000px);
+  transform: rotateX(-90deg) translateZ(-1000px);
+}
+
+body .background #cube .bottom {
+  -webkit-transform: rotateX(90deg) translateZ(-1000px);
+  transform: rotateX(90deg) translateZ(-1000px);
+}
+
+body footer {
+  z-index: 2;
+  position: fixed;
+  left: -25px;
+  bottom: 30px;
+  width: 100%;
+  height: 66px;
+  opacity: 0.8;
+}
+
+body footer figure {
+  position: fixed;
+  width: 50px;
+  height: 66px;
+  display: block;
+  background: url(./pictures/html_honor.png) no-repeat center;
+  background-size: 50px 66px;
+}
+
+body footer figure img {
+  position: absolute;
+  display: block;
+  top: 17px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+body footer div {
+  float: right;
+  width: 50px;
+  height: 66px;
+  display: block;
+  transform: translateY(15px);
+  background: url(./pictures/html_honor.png) no-repeat center;
+  background-size: 50px 66px;
+}
+
+body footer div button {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: url(./pictures/mograph/pause.png) no-repeat center;
+  background-size: 30px 30px;
+}
+
+body footer div button:hover {
+  cursor: pointer;
+}

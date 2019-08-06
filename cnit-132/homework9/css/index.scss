@@ -1,0 +1,247 @@
+/** Import Resources **/
+
+/* latin */
+
+@font-face {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Press Start 2P Regular'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v6/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/** Variables **/
+
+/** Lists **/
+
+/** Maps **/
+
+/** Mixins **/
+
+@mixin dimension($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin resetBox() {
+    margin: 0;
+    padding: 0;
+}
+
+/** Tag Styling **/
+
+body {
+    @include resetBox();
+    background: url(../pictures/desktop_texture.png);
+    .container {
+        @include resetBox();
+        .content {
+            @include resetBox();
+            .menu-bar {
+                @include resetBox();
+                @include dimension(100%, 25px);
+                min-width: 600px;
+                background-color: white;
+                border-bottom: 2px solid black;
+                .menu-bar-content {
+                    @include resetBox();
+                    @include dimension(500px, 25px);
+                    list-style: none;
+                    .menu-bar-item {
+                        @include dimension(98px, 23px);
+                        float: left;
+                        border: 1px solid white;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        h6 {
+                            text-align: center;
+                            @include dimension(80px, 15px);
+                            margin: 5px auto;
+                        }
+                    }
+                    .bar-item-visible {
+                        border: 1px inset;
+                        background-color: gray;
+                    }
+                }
+            }
+            .menu-content {
+                margin-top: 0;
+                .menu {
+                    display: none;
+                    position: absolute;
+                    margin-top: 0;
+                    background-color: white;
+                    border-right: 1px solid black;
+                    border-bottom: 2px solid black;
+                    border-left: 1px solid black;
+                    ul {
+                        padding: 0;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        list-style: none;
+                        li {
+                            height: 20px;
+                            padding: 5px;
+                            padding-left: 10px;
+                            font-size: 12px;
+                            &:hover {
+                                background-color: lightgray;
+                                cursor: pointer;
+                            }
+                            a {
+                                text-decoration: none;
+                                color: black;
+                            }
+                            #html5-logo {
+                                float: right;
+                                margin-right: 5px;
+                                @include dimension(15px, 15px);
+                            }
+                            #css3-logo {
+                                float: right;
+                                margin-top: 3px;
+                                margin-right: 3px;
+                                @include dimension(10px, 10px);
+                            }
+                        }
+                    }
+                }
+                .menu-visible {
+                    display: block;
+                }
+                #file-menu {
+                    width: 168px;
+                }
+                #edit-menu {
+                    width: 138px;
+                    left: 100px;
+                }
+                #view-menu {
+                    left: 200px;
+                    width: 118px;
+                }
+                #window-menu {
+                    left: 300px;
+                    width: 278px;
+                }
+                #help-menu {
+                    left: 400px;
+                    width: 198px;
+                }
+            }
+        }
+    }
+    .desktop {
+        min-width: 600px;
+        .desktop-content {
+            min-width: 600px;
+            .shortcut {
+                width: 100px;
+                margin-top: 10px;
+                float: right;
+                clear: both;
+                img {
+                    display: block;
+                    width: 55px;
+                    margin: 0 auto;
+                    border: 1px solid transparent;
+                }
+                p {
+                    font-size: 10px;
+                    text-align: center;
+                    padding: 2px;
+                    border: 1px solid transparent;
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+            }
+            .shortcut-selected {
+                img {
+                    border: 1px dotted black;
+                    filter: invert(100%);
+                    background-color: white;
+                }
+                p {
+                    border: 1px dotted white;
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
+    }
+    i {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        padding: 3px;
+        margin-right: 8px;
+        float: right;
+    }
+    .right {
+        transform: rotate(-45deg);
+    }
+    .context-menu-activated {
+        display: block;
+    }
+    .general-context-menu {
+        display: none;
+        position: absolute;
+        width: 218px;
+        background-color: white;
+        font-size: 12px;
+        border: 1px solid black;
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            li {
+                margin: 5px 5px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: lightgray;
+                }
+            }
+        }
+    }
+    .file-context-menu {
+        display: none;
+        position: absolute;
+        width: 228px;
+        background-color: white;
+        font-size: 12px;
+        border: 1px solid black;
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            li {
+                margin: 5px 5px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: lightgray;
+                }
+            }
+        }
+    }
+    div {
+        font-family: 'Press Start 2P', cursive;
+        p {
+            font-size: 15px;
+        }
+    }
+    #connect-button {
+        @include dimension(100px, 40px);
+        float: right;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+        border-radius: 0;
+        background-color: lightgray;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

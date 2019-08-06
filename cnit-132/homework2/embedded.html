@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+            
+            <title>Embedded Style Sheet</title>
+            
+            <style>
+                
+                body {
+                    background-color: grey;
+                    text-align:center; /* Hack for IE/Win */
+                    margin-top: 10px;
+                }
+            
+            
+            /* NAVIGATION */
+            
+            
+            ul#mainNav {
+                
+                padding: 0;
+                list-style: none;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 160px;
+            }
+            
+            #mainNav li {
+                float: left;
+                width: 12em;
+            }
+            
+            #mainNav a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 11px;
+                
+                border: 1px dashed #999999;
+                border-bottom: none;
+                display: block;
+                padding: 7px 5px 2px 30px;
+                background: #E7E7E7 url(./link.png) no-repeat left center;
+            }
+            
+            #mainNav a:hover {
+                font-weight: bold;
+                background: #B2F511 url(./go.png) no-repeat 5px 50%;
+            }
+            
+            /* special formatting for home page link */
+            a#homeLink {
+                background: #E7E7E7 url(./home.png) no-repeat 5px 52%;
+            }
+            
+            
+            
+            /* IE Fixes */
+            
+            /* force hover on entire width of  link */
+            * html #mainNav a {
+                height: 1px;
+            }
+            
+            
+            
+            .content {
+                width:950px;
+                
+                margin: 0px auto; padding: 10px;
+                text-align: left; /* Counteract to IE/Win Hack */
+                
+                background-color:#eee;
+            }
+            
+            
+            
+            .pol {
+                text-align: center;
+                font-size: 64px;
+            }
+            
+            
+            h1 {
+                
+                font:  32pt monospace;
+                color: #8f0052;
+                text-align: center;
+            }
+            
+            
+            h2 {
+                
+                font:  24pt cursive;
+                color: #00ffbb;
+                text-align: left;
+            }
+            
+            
+            h3 {
+                
+                font-family: "San Francisco";
+                font-size: 20pt;
+                color: #884433;
+                text-align: right;
+            }
+            
+            h4 {
+                
+                font-family: "Source Code Pro";
+                font-size: 18pt;
+                color: #000022;
+                text-align: left;
+            }
+            
+            
+            p.left  {
+                
+                font-family: "Josefin Sans";
+                font-size: 16pt;
+                color: #aaaaaa;
+                text-align: right;
+                font-weight: bold;
+                text-indent: 1in;
+            }
+            
+            
+            p.right  {
+                
+                font-family: "American Typewriter";
+                font-size: 16pt;
+                color: #ffffff;
+                text-align: right;
+                background-color: #aaaaaa;
+                border-style: inset;
+                border-color: #000000;
+                padding: 10em;
+            }
+            
+            p.ital  {
+                
+                font-family: "Chalkduster";
+                font-size: 10pt;
+                color: #ff3e00;
+                text-align: justify;
+                font-weight: bold;
+                font-style: italic;
+            }
+            
+            p.new {
+                font-family: Skia;
+                font-size: 15pt;
+                color: #00ff00;
+                text-align: center;
+            }
+            
+            a {
+                
+                color: #0000ff;
+                text-decoration: none;
+            }
+            
+            a:hover { color:#8f0052;
+                text-decoration: underline;
+                background-color: yellow;
+            }
+            
+            .center {text-align: center;}
+            
+            
+                </style>
+            
+            </head>
+    
+    
+    <body>
+        
+        
+        <div class="content">
+            
+            <section>
+                
+                
+                
+                <ul id="mainNav">
+                    
+                    <li><a href="./embedded.html" target="_self" id="homeLink">Embedded Style Sheet</a></li>
+                    <li><a href="./linked1.html" target="_self">Linked Style Sheet 1</a></li>
+                    <li><a href="./linked2.html" target="_self">Linked Style Sheet 2</a></li>
+                    
+                </ul>
+                
+                
+                
+                <br>
+                
+                <h1>Embedded Style Sheet</h1>
+                
+                
+                <p class="pol">The politics of the 21st century</p>
+                
+                <h2>Lefties and Righties</h2>
+                
+                
+                <p class="left">
+                
+                Socialists are to the left of liberals.
+                Most liberals are Democrats, although some have
+                wandered over to the Green party. Republicans are right-wingers.
+                Most Republicans are
+                conservative. What does conservative mean? Do they want to
+                conserve the environment? Do they want to conserve the 2nd amendment?
+                Do they want to conserve a woman's right to choose an abortion?
+                Do they want to conserve a separation between church and state?
+                
+                <a href="http://www.microsoft.com">Click here</a>
+                for Bill Gates.</p>
+                
+                
+                <h3>San Francisco Giants</h3>
+                
+                <p class="right">
+                
+                It may just be that the Giants have seen the last of Hunter Pence this season, and what a
+                loss it will be. Pence is not only the offensive catalyst, but his presence both on the
+                field and in the clubhouse is immense. Right now, the right fielder has been relegated to
+                the dugout, and that may not change any time soon as he re-injured his surgically repaired hamstring muscle a few days ago.
+                The Giants are now just one game behind the first-place Dodgers in the National League West entering the games of Aug. 27.
+                
+                <a href="http://www.sfgiants.com">Click here</a> for your
+                San Francisco Giants!
+                </p>
+                
+                <h4>Personal Responsibility</h4>
+                
+                <p class="ital">
+                The name of the game is personal responsibility. That means that you
+                just need to take care of yourself and not
+                care about things like community involvement, poor people, or
+                the obscene gap between the rich and poor in this country.
+                </p>
+                
+                <p class="new">
+                Like the hidden keyword, displays no border. Unless a background-image is set, the calculated value of border-top-width will be 0, even if the specified value is something else. In the case of table cell and border collapsing, the none value has the lowest priority: if any other conflicting border is set, it will be displayed.
+                </p>
+                
+                <h3>
+                    <a href = "./linked1.html" target = "_self"> Next Page </a>
+                </h3>
+                
+            </section>
+            
+        </div>
+        
+        <footer>
+            
+            <p class="center">
+            
+            <a href="https://validator.w3.org/nu/?doc=https://fog.ccsf.edu/~srubin/embedded.html">
+                <img style="border:0;width:88px;height:31px" src="HTML5.gif"
+                    alt="HTML5"></a>
+            
+            
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!">
+                    </a>
+            </p>
+            
+            
+        </footer>
+        
+    </body>
+</html>
+

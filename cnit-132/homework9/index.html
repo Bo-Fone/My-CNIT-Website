@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- This homeowork is to demonstrate my knowledge of JavaScript along with all previous practice with HTML5, CSS3, PHP, and my personal knowledge of Sass. This website will looks like not satisfing the requirement but examing the code, you will see that it does. -->
+        <meta name="description" content="Bo's Homework 9: The Matrix Experience" />
+        <meta name="keywords" content="bo, homework, 9, matrix, experience" />
+        <meta name="author" content="Bo Fone" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./js/jquery-ui-1.12.1.custom/jquery-ui.css">
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="./js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+        <script src="./js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+        <script src="./js/custom.js"></script>
+        <title>Bo's Homework 9: The Matrix Experience</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="menu-bar">
+                    <ul class="menu-bar-content">
+                        <li class="menu-bar-item" onclick="toggleMenu(0)">
+                            <h6>File</h6>
+                        </li>
+                        <li class="menu-bar-item" onclick="toggleMenu(1)">
+                            <h6>Edit</h6>
+                        </li>
+                        <li class="menu-bar-item" onclick="toggleMenu(2)">
+                            <h6>View</h6>
+                        </li>
+                        <li class="menu-bar-item" onclick="toggleMenu(3)">
+                            <h6>Window</h6>
+                        </li>
+                        <li class="menu-bar-item" onclick="toggleMenu(4)">
+                            <h6>Help</h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-content">
+                    <div class="menu" id="file-menu">
+                        <ul>
+                            <li>Open</li>
+                            <li>Open With...</li>
+                            <li>New File</li>
+                            <li>New Folder</li>
+                            <li>Close Window</li>
+                        </ul>
+                    </div>
+                    <div class="menu" id="edit-menu">
+                        <ul>
+                            <li>Undo</li>
+                            <li>Redo</li>
+                            <li>Cut</li>
+                            <li>Copy</li>
+                            <li>Paste</li>
+                            <li>Delete</li>
+                            <li>Select All</li>
+                        </ul>
+                    </div>
+                    <div class="menu" id="view-menu">
+                        <ul>
+                            <li>Show</li>
+                            <li>Hide</li>
+                            <li>Zoom In</li>
+                            <li>Zoom Out</li>
+                            <li>Minimize</li>
+                        </ul>
+                    </div>
+                    <div class="menu" id="window-menu">
+                        <ul>
+                            <li>Show Previous</li>
+                            <li>Show Next</li>
+                            <li>Bring All Up to Front</li>
+                        </ul>
+                    </div>
+                    <div class="menu" id="help-menu">
+                        <ul>
+                            <li>Help</li>
+                            <li onclick="window.open('https://jigsaw.w3.org/css-validator/check/referer', 'target=_blank')">
+                                <a href="https://validator.w3.org/check?uri=referer">Verify</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.5 199.5" id="css3-logo">
+                                    <title>HTML5 CSS Styling Logo</title>
+                                    <path fill="#000000" d="M32.8,0L25.4,37.0 176.0,37.0 171.3,60.9 20.6,60.9 13.3,97.9 163.9,97.9 155.5,140.1 94.8,160.2 42.2,140.1 45.8,121.8 8.8,121.8 0,166.2 87.0,199.5 187.3,166.2 200.6,99.4 203.3,86.0 220.4,0z"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="html5-logo">
+                                    <title>HTML5 Logo Badge</title>
+                                    <!-- <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512" /> -->
+                                    <!-- <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37" /> -->
+                                    <path fill="#000000" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"
+                                    />
+                                    <path fill="#000000" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"
+                                    />
+                                </svg>
+                            </li>
+                            <li>Acknowledgement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desktop">
+                    <div class="desktop-content">
+                        <div class="shortcut">
+                            <img src="./pictures/folder.png" alt="The Prophet Project" class="shortcut-icon" onclick="selectShortcut(0)">
+                            <div class="shortcut-text" onclick="selectShortcut(0)">
+                                <p>The Prophet Project</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/file.png" alt="Keymaker Contact" class="shortcut-icon" onclick="selectShortcut(1)">
+                            <div class="shortcut-text" onclick="selectShortcut(1)">
+                                <p>Keymaker Contact</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/picture.png" alt="Zion Map" class="shortcut-icon" onclick="selectShortcut(2)">
+                            <div class="shortcut-text" onclick="selectShortcut(2)">
+                                <p>Zion Map</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/picture.png" alt="Morpheus" class="shortcut-icon" onclick="selectShortcut(3)">
+                            <div class="shortcut-text" onclick="selectShortcut(3)">
+                                <p>Morpheus</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/picture.png" alt="Mission" class="shortcut-icon" onclick="selectShortcut(4)">
+                            <div class="shortcut-text" onclick="selectShortcut(4)">
+                                <p>Mission</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/terminal.png" alt="Terminal" class="shortcut-icon" onclick="selectShortcut(5)">
+                            <div class="shortcut-text" onclick="selectShortcut(5)">
+                                <p>Terminal</p>
+                            </div>
+                        </div>
+                        <div class="shortcut">
+                            <img src="./pictures/trash_can.png" alt="Trash Can" class="shortcut-icon" onclick="selectShortcut(6)">
+                            <div class="shortcut-text" onclick="selectShortcut(6)">
+                                <p>Trash Can</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="window" title="WARNING!">
+                    <section>
+                        <p>Detected an enforced communication link!</p>
+                        <button type="button" id="connect-button" onclick="window.open('./deep/index.html','_self')">Connect</button>
+                    </section>
+                </div>
+                <div class="general-context-menu">
+                    <ul>
+                        <li>New Folder</li>
+                        <li>Get Info</li>
+                        <li>Clean Up</li>
+                        <li>Sort by
+                            <i class="right"></i>
+                        </li>
+                        <li>Show View Options</li>
+                    </ul>
+                </div>
+                <div class="file-context-menu">
+                    <ul>
+                        <li>Open</li>
+                        <li>Open With
+                            <i class="right"></i>
+                        </li>
+                        <li>Move to Trash</li>
+                        <li>Get Info</li>
+                        <li>Rename</li>
+                        <li>Duplicate</li>
+                        <li>Make Alias</li>
+                        <li>Clean Up Selection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
