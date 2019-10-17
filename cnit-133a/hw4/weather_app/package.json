@@ -1,0 +1,22 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "A simple NodeJS command line weather lookup app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "simple",
+    "command",
+    "line"
+  ],
+  "author": "Bo Fone",
+  "license": "MIT",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "request": "^2.88.0",
+    "yargs": "^14.2.0"
+  }
+}
