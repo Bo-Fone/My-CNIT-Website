@@ -214,15 +214,15 @@ textarea {
 }
 
 .anchor::after {
-    content: url("/img/intmark.png");
+    content: url(/cnit-132a/img/intmark.png);
 }
 
 .anchor[href$="html"]::after {
-    content: url("/img/browser.png");
+    content: url(/cnit-132a/img/browser.png);
 }
 
 .anchor[href$="pdf"]::after {
-    content: url("/img/pdf.png");
+    content: url(/cnit-132a/img/pdf.png);
 }
 
 .anchor:link,
