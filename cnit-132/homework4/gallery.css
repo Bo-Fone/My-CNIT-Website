@@ -221,7 +221,8 @@ body footer div {
   width: 50px;
   height: 66px;
   display: block;
-  transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
   background: url(./pictures/html_honor.png) no-repeat center;
   background-size: 50px 66px;
 }
@@ -240,3 +241,4 @@ body footer div button {
 body footer div button:hover {
   cursor: pointer;
 }
+/*# sourceMappingURL=gallery.css.map */

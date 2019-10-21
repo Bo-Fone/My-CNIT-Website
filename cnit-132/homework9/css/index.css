@@ -186,7 +186,8 @@ body .desktop .desktop-content .shortcut p:hover {
 
 body .desktop .desktop-content .shortcut-selected img {
   border: 1px dotted black;
-  filter: invert(100%);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
   background-color: white;
 }
 
@@ -205,7 +206,8 @@ body i {
 }
 
 body .right {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 body .context-menu-activated {
@@ -283,3 +285,4 @@ body #connect-button {
 body #connect-button:hover {
   cursor: pointer;
 }
+/*# sourceMappingURL=index.css.map */

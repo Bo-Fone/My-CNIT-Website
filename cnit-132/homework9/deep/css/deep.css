@@ -40,7 +40,8 @@ body .container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body .container .solid {
@@ -49,7 +50,8 @@ body .container .solid {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: black;
   opacity: 0.5;
 }
@@ -60,7 +62,8 @@ body .container .terminal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border: 10px ridge white;
 }
 
@@ -70,7 +73,8 @@ body .container .terminal .terminal-pane {
   margin: 0;
   border: 3px dotted #33FF00;
   color: #33FF00;
-  box-shadow: 0 0 1px #9DFF85, 0 0 3px #9DFF85, 0 0 5px #9DFF85, 0 0 10px #9DFF85;
+  -webkit-box-shadow: 0 0 1px #9DFF85, 0 0 3px #9DFF85, 0 0 5px #9DFF85, 0 0 10px #9DFF85;
+          box-shadow: 0 0 1px #9DFF85, 0 0 3px #9DFF85, 0 0 5px #9DFF85, 0 0 10px #9DFF85;
 }
 
 body .container .terminal .terminal-pane .dialog-pane {
@@ -92,45 +96,87 @@ body .container .terminal .terminal-pane .dialog-pane #dialog li .message {
   position: relative;
 }
 
-@keyframes message-anim-1 {
+@-webkit-keyframes message-anim-1 {
   0% {
-    clip: rect(3px, 1000px, 6px, 0);
+    clip: rect(4px, 1000px, 4px, 0);
   }
   20% {
-    clip: rect(2px, 1000px, 13px, 0);
+    clip: rect(14px, 1000px, 6px, 0);
   }
   40% {
-    clip: rect(14px, 1000px, 10px, 0);
+    clip: rect(18px, 1000px, 3px, 0);
   }
   60% {
-    clip: rect(17px, 1000px, 10px, 0);
+    clip: rect(20px, 1000px, 11px, 0);
   }
   80% {
-    clip: rect(15px, 1000px, 2px, 0);
+    clip: rect(12px, 1000px, 1px, 0);
   }
   100% {
-    clip: rect(12px, 1000px, 11px, 0);
+    clip: rect(16px, 1000px, 7px, 0);
+  }
+}
+
+@keyframes message-anim-1 {
+  0% {
+    clip: rect(4px, 1000px, 4px, 0);
+  }
+  20% {
+    clip: rect(14px, 1000px, 6px, 0);
+  }
+  40% {
+    clip: rect(18px, 1000px, 3px, 0);
+  }
+  60% {
+    clip: rect(20px, 1000px, 11px, 0);
+  }
+  80% {
+    clip: rect(12px, 1000px, 1px, 0);
+  }
+  100% {
+    clip: rect(16px, 1000px, 7px, 0);
+  }
+}
+
+@-webkit-keyframes message-anim-2 {
+  0% {
+    clip: rect(15px, 1000px, 7px, 0);
+  }
+  20% {
+    clip: rect(8px, 1000px, 7px, 0);
+  }
+  40% {
+    clip: rect(16px, 1000px, 13px, 0);
+  }
+  60% {
+    clip: rect(1px, 1000px, 10px, 0);
+  }
+  80% {
+    clip: rect(7px, 1000px, 2px, 0);
+  }
+  100% {
+    clip: rect(13px, 1000px, 13px, 0);
   }
 }
 
 @keyframes message-anim-2 {
   0% {
-    clip: rect(4px, 1000px, 1px, 0);
+    clip: rect(15px, 1000px, 7px, 0);
   }
   20% {
-    clip: rect(20px, 1000px, 2px, 0);
+    clip: rect(8px, 1000px, 7px, 0);
   }
   40% {
-    clip: rect(1px, 1000px, 4px, 0);
+    clip: rect(16px, 1000px, 13px, 0);
   }
   60% {
-    clip: rect(2px, 1000px, 11px, 0);
+    clip: rect(1px, 1000px, 10px, 0);
   }
   80% {
-    clip: rect(12px, 1000px, 15px, 0);
+    clip: rect(7px, 1000px, 2px, 0);
   }
   100% {
-    clip: rect(15px, 1000px, 15px, 0);
+    clip: rect(13px, 1000px, 13px, 0);
   }
 }
 
@@ -168,3 +214,4 @@ body .container .terminal .terminal-pane .dialog-pane #dialog li .message input 
 body .container .terminal .terminal-pane .dialog-pane #dialog li .message input:focus {
   outline: none;
 }
+/*# sourceMappingURL=deep.css.map */
