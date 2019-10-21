@@ -119,8 +119,8 @@ textarea {
   padding: 0;
   zoom: 1;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .menu-item {
@@ -195,19 +195,19 @@ textarea {
 .anchor[href$="html"]::after,
 .anchor[href$="pdf"]::after {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .anchor::after {
-  content: url(/cnit-132a/img/intmark.png);
+  content: url(/My-CNIT-Website/cnit-132a/img/intmark.png);
 }
 
 .anchor[href$="html"]::after {
-  content: url(/cnit-132a/img/browser.png);
+  content: url(/My-CNIT-Website/cnit-132a/img/browser.png);
 }
 
 .anchor[href$="pdf"]::after {
-  content: url(/cnit-132a/img/pdf.png);
+  content: url(/My-CNIT-Website/cnit-132a/img/pdf.png);
 }
 
 .anchor:link,
@@ -233,7 +233,7 @@ textarea {
 
 .grayscale {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 hr {
@@ -345,7 +345,10 @@ figcaption {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -355,6 +358,7 @@ figcaption {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
+
   *,
   *:before,
   *:after {
@@ -365,16 +369,20 @@ figcaption {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
+
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
+
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -383,14 +391,17 @@ figcaption {
   a[href^="javascript:"]:after {
     content: "";
   }
+
   pre {
     white-space: pre-wrap !important;
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -398,19 +409,23 @@ figcaption {
   thead {
     display: table-header-group;
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
