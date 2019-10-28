@@ -1,0 +1,23 @@
+{
+  "name": "cnit-132a",
+  "version": "1.0.0",
+  "description": "This website contains Advanced HTML & CSS class homework.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CNIT",
+    "132a",
+    "Advanced",
+    "HTML",
+    "CSS",
+    "class",
+    "course",
+    "homework",
+    "Bo",
+    "Fone"
+  ],
+  "author": "Bo Fone",
+  "license": "MIT"
+}

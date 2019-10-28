@@ -119,8 +119,8 @@ textarea {
   padding: 0;
   zoom: 1;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .menu-item {
@@ -182,6 +182,14 @@ textarea {
   margin-left: 5px;
 }
 
+.rolldown-list {
+  padding: 0;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .heading,
 .title {
   font-family: 'Codystar', Helvetica, sans-serif;
@@ -195,7 +203,7 @@ textarea {
 .anchor[href$="html"]::after,
 .anchor[href$="pdf"]::after {
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .anchor::after {
@@ -203,11 +211,11 @@ textarea {
 }
 
 .anchor[href$="html"]::after {
-  content: url(/My-CNIT-Website/cnit-132a/img/browser.png);
+  content: url(/My-CNIT-Website/cnit-132aimg/browser.png);
 }
 
 .anchor[href$="pdf"]::after {
-  content: url(/My-CNIT-Website/cnit-132a/img/pdf.png);
+  content: url(/My-CNIT-Website/cnit-132aimg/pdf.png);
 }
 
 .anchor:link,
@@ -233,7 +241,7 @@ textarea {
 
 .grayscale {
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 hr {
@@ -257,6 +265,79 @@ blockquote {
 
 figcaption {
   font-size: 14px;
+}
+
+.rolldown-list-item {
+  margin: .123em 0;
+  display: block;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: whitesmoke;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-animation: rolldown .7s 1;
+          animation: rolldown .7s 1;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.rolldown-list-item a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.rolldown-list-item a:hover {
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.rolldown-list li:hover {
+  background-color: darkgray;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+@-webkit-keyframes rolldown {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  70% {
+    visibility: visible;
+    -webkit-transform: rotateX(-20deg);
+            transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes rolldown {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  70% {
+    visibility: visible;
+    -webkit-transform: rotateX(-20deg);
+            transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
 }
 
 /* ==========================================================================
@@ -345,10 +426,7 @@ figcaption {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -358,7 +436,6 @@ figcaption {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-
   *,
   *:before,
   *:after {
@@ -369,20 +446,16 @@ figcaption {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
   a:visited {
     text-decoration: underline;
   }
-
   a[href]:after {
-    content: " ("attr(href) ")";
+    content: " (" attr(href) ")";
   }
-
   abbr[title]:after {
-    content: " ("attr(title) ")";
+    content: " (" attr(title) ")";
   }
-
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -391,17 +464,14 @@ figcaption {
   a[href^="javascript:"]:after {
     content: "";
   }
-
   pre {
     white-space: pre-wrap !important;
   }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -409,23 +479,19 @@ figcaption {
   thead {
     display: table-header-group;
   }
-
   tr,
   img {
     page-break-inside: avoid;
   }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
