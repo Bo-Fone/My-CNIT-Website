@@ -53,38 +53,79 @@
         </style>
     </head>
     <body>
-        <header role="banner" aria-labelledby="p-banner">
+        <header role="banner">
             <h1>Great Movies</h1>
             <h2>Great Directors</h2>
         </header>
         <main>
-            <section>
-                <h1>Avatar</h1>
-                <p>Director: James Cameron <wbr>(born August 16, 1954)</wbr></p>
-                <p>Type: Science fiction</p>
-                <p>Release Date: December 18, 2009</p>
+            <section itemscope itemtype="http://schema.org/Movie">
+                <h1 itemprop="name">Avatar</h1>
+                <p
+                    itemprop="director"
+                    itemscope
+                    itemtype="http://schema.org/Person"
+                >
+                    Director: <span itemprop="name">James Cameron</span> (born
+                    <span itemprop="birthDate">August 16, 1954</span>)
+                </p>
+                <p>Type: <span itemprop="genre">Science fiction</span></p>
+                <p>
+                    Release Date:
+                    <span itemprop="datePublished">December 18, 2009</span>
+                </p>
             </section>
-            <section>
-                <h1>Star Wars: Episode VII</h1>
-                <p>Director: J. J. Abrams <wbr>(born June 27, 1966)</wbr></p>
-                <p>Type: Science fiction</p>
-                <p>Release Date: December 18, 2015</p>
+            <section itemscope itemtype="http://schema.org/Movie">
+                <h1 itemprop="name">Star Wars: Episode VII</h1>
+                <p
+                    itemprop="director"
+                    itemscope
+                    itemtype="http://schema.org/Person"
+                >
+                    Director: <span itemprop="name">J. J. Abrams</span> (born
+                    <span itemprop="birthDate">June 27, 1966</span>)
+                </p>
+                <p>Type: <span itemprop="genre">Science fiction</span></p>
+                <p>
+                    Release Date:
+                    <span itemprop="datePublished">December 18, 2015</span>
+                </p>
             </section>
-            <section>
-                <h1>Titanic</h1>
-                <p>Director: James Cameron <wbr>(born August 16, 1954)</wbr></p>
-                <p>Type: Drama</p>
-                <p>Release Date: December 19, 1997</p>
+            <section itemscope itemtype="http://schema.org/Movie">
+                <h1 itemprop="name">Titanic</h1>
+                <p
+                    itemprop="director"
+                    itemscope
+                    itemtype="http://schema.org/Person"
+                >
+                    Director: <span itemprop="name">James Cameron</span> (born
+                    <span itemprop="birthDate">August 16, 1954</span>)
+                </p>
+                <p>Type: <span itemprop="genre">Drama</span></p>
+                <p>
+                    Release Date:
+                    <span itemprop="datePublished">December 19, 1997</span>
+                </p>
             </section>
-            <section>
-                <h1>Schindler's List</h1>
-                <p>Director: Steven Spielberg <wbr>(born December 18, 1946)</wbr></p>
-                <p>Type: Drama</p>
-                <p>Release Date: December 15, 1993</p>
+            <section itemscope itemtype="http://schema.org/Movie">
+                <h1 itemprop="name">Schindler's List</h1>
+                <p
+                    itemprop="director"
+                    itemscope
+                    itemtype="http://schema.org/Person"
+                >
+                    Director:
+                    <span itemprop="name">Steven Spielberg</span> (born
+                    <span itemprop="birthDate">December 18, 1946</span>)
+                </p>
+                <p>Type: <span itemprop="genre">Drama</span></p>
+                <p>
+                    Release Date:
+                    <span itemprop="datePublished">December 15, 1993</span>
+                </p>
             </section>
         </main>
         <footer role="contentinfo">
-            <img src="movielogo.png" />
+            <img src="movielogo.png" alt="" />
             <p>List made by CNIT 132A class at CCSF</p>
             <p>Copyright &copy; 2017</p>
         </footer>
