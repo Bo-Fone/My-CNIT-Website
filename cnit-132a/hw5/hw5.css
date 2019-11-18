@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+  background-color: #eecccc;
+}
+
+.col1 {
+  float: left;
+  width: 50%;
+  background-color: #2f2828;
+  color: #eecccc;
+}
+
+.col1 h1 {
+  color: black;
+}
+
+.col2 {
+  float: left;
+  width: 25%;
+  background-color: #eecccc;
+  color: #2f2828;
+}
+
+.col3 {
+  float: left;
+  width: 25%;
+  background-color: #2f2828;
+  color: #eecccc;
+}
+
+.footer {
+  width: 100%;
+  background-color: #eecccc;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=hw5.css.map */

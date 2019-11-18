@@ -1,0 +1,17 @@
+!!! 5
+%html
+    %head
+        %title This will be written in HAML
+        %meta(name="description", content="haml file will be produced from this html document")
+        %meta(charset="utf-8")
+    %body
+        #wrapper
+            %header
+                %h1 HTML document
+            .content
+                / This is a simple comment in my HTML document.
+                %p A simple HTML document that will be transformed into HAML
+                %img(src="fakeimage.jpg", alt="just a fake image, no image at all")
+            %footer
+                %address 50 Phelan Ave, San Francisco, CA
+                -# Upon a simple research, it looks like HAML is gradually being deprecated. Pug(Jade) has an even cleaner syntax and much larger GitHub community.

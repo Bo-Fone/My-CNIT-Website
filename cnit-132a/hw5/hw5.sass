@@ -1,0 +1,32 @@
+// Variables
+$primary-color: #eecccc
+$secondary-color: #2f2828
+$secondary-col-width: 25%
+
+// Mixins
+@mixin col-layout($col-width)
+    float: left
+    width: $col-width
+
+@mixin colors($bgcolor, $fgcolor)
+    background-color: $bgcolor
+    color: $fgcolor
+
+.wrapper
+    width: 100%
+    background-color: $primary-color
+.col1
+    +col-layout($col-width: 50%)
+    +colors($bgcolor: $secondary-color, $fgcolor: $primary-color)
+    h1
+        color: black
+.col2
+    +col-layout($col-width: $secondary-col-width)
+    +colors($bgcolor: $primary-color, $fgcolor: $secondary-color)
+.col3
+    +col-layout($col-width: $secondary-col-width)
+    +colors($bgcolor: $secondary-color, $fgcolor: $primary-color)
+.footer
+    width: 100%
+    background-color: $primary-color
+    font-size: 0.9rem
