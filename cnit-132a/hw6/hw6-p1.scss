@@ -14,6 +14,7 @@ body {
         padding-top: 300px;
         padding-bottom: 10px;
         animation: flying 4s linear infinite;
+        animation-play-state: running;
 
         @keyframes flying {
             from {
