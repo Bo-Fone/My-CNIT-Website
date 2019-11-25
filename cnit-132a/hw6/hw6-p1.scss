@@ -13,7 +13,7 @@ body {
         background: url(./img/clouds.png) center top repeat-x;
         padding-top: 300px;
         padding-bottom: 10px;
-        animation: flying 4s linear infinite running;
+        animation: flying 4s linear infinite;
 
         @keyframes flying {
             from {
