@@ -98,85 +98,85 @@ body .container .terminal .terminal-pane .dialog-pane #dialog li .message {
 
 @-webkit-keyframes message-anim-1 {
   0% {
-    clip: rect(2px, 1000px, 18px, 0);
+    clip: rect(1px, 1000px, 11px, 0);
   }
   20% {
-    clip: rect(13px, 1000px, 10px, 0);
+    clip: rect(6px, 1000px, 9px, 0);
   }
   40% {
-    clip: rect(13px, 1000px, 19px, 0);
+    clip: rect(12px, 1000px, 5px, 0);
   }
   60% {
-    clip: rect(19px, 1000px, 14px, 0);
+    clip: rect(20px, 1000px, 10px, 0);
   }
   80% {
-    clip: rect(7px, 1000px, 19px, 0);
+    clip: rect(7px, 1000px, 1px, 0);
   }
   100% {
-    clip: rect(19px, 1000px, 2px, 0);
+    clip: rect(20px, 1000px, 5px, 0);
   }
 }
 
 @keyframes message-anim-1 {
   0% {
-    clip: rect(2px, 1000px, 18px, 0);
+    clip: rect(1px, 1000px, 11px, 0);
   }
   20% {
-    clip: rect(13px, 1000px, 10px, 0);
+    clip: rect(6px, 1000px, 9px, 0);
   }
   40% {
-    clip: rect(13px, 1000px, 19px, 0);
+    clip: rect(12px, 1000px, 5px, 0);
   }
   60% {
-    clip: rect(19px, 1000px, 14px, 0);
+    clip: rect(20px, 1000px, 10px, 0);
   }
   80% {
-    clip: rect(7px, 1000px, 19px, 0);
+    clip: rect(7px, 1000px, 1px, 0);
   }
   100% {
-    clip: rect(19px, 1000px, 2px, 0);
+    clip: rect(20px, 1000px, 5px, 0);
   }
 }
 
 @-webkit-keyframes message-anim-2 {
   0% {
-    clip: rect(3px, 1000px, 12px, 0);
+    clip: rect(1px, 1000px, 12px, 0);
   }
   20% {
-    clip: rect(10px, 1000px, 2px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
   40% {
-    clip: rect(1px, 1000px, 19px, 0);
+    clip: rect(11px, 1000px, 14px, 0);
   }
   60% {
-    clip: rect(8px, 1000px, 16px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
   80% {
-    clip: rect(19px, 1000px, 19px, 0);
+    clip: rect(8px, 1000px, 19px, 0);
   }
   100% {
-    clip: rect(3px, 1000px, 14px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
 }
 
 @keyframes message-anim-2 {
   0% {
-    clip: rect(3px, 1000px, 12px, 0);
+    clip: rect(1px, 1000px, 12px, 0);
   }
   20% {
-    clip: rect(10px, 1000px, 2px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
   40% {
-    clip: rect(1px, 1000px, 19px, 0);
+    clip: rect(11px, 1000px, 14px, 0);
   }
   60% {
-    clip: rect(8px, 1000px, 16px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
   80% {
-    clip: rect(19px, 1000px, 19px, 0);
+    clip: rect(8px, 1000px, 19px, 0);
   }
   100% {
-    clip: rect(3px, 1000px, 14px, 0);
+    clip: rect(20px, 1000px, 3px, 0);
   }
 }
 

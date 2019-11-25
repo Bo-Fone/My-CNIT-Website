@@ -1,0 +1,145 @@
+body {
+    background-color: #c0deed;
+
+    #sky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background: url(./img/clouds.png) center top repeat-x;
+        padding-top: 300px;
+        padding-bottom: 10px;
+        animation: flying 4s linear infinite running;
+
+        @keyframes flying {
+            from {
+                background-position-x: 0%;
+            }
+            to {
+                background-position-x: 100%;
+            }
+        }
+    }
+
+    #banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        perspective: 800px;
+        overflow: hidden;
+
+        span {
+            position: absolute;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                sans-serif;
+            font-size: 20vh;
+            color: skyblue;
+            white-space: nowrap;
+        }
+
+        .banner {
+            animation: banner 10s ease-out both;
+            mix-blend-mode: multiply;
+
+            @keyframes banner {
+                from {
+                    opacity: 0;
+                    right: 0;
+                    transform: translateX(-200%);
+                }
+                75% {
+                    opacity: 0.1;
+                    right: 0;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0.4;
+                    right: 50vw;
+                    transform: translateX(50%);
+                }
+            }
+        }
+
+        .text {
+            color: skyblue;
+            opacity: 0;
+            mix-blend-mode: screen;
+
+            @for $i from 0 through 100 {
+                $key: $i + 1;
+                &:nth-child(#{$key}) {
+                    $row: floor($i / 20);
+                    color: rgba(
+                        $key * 2,
+                        150 - $key / 2,
+                        220 - $key * 2,
+                        0.1 * $key
+                    );
+                    clip-path: polygon(
+                        floor($i / 2) * 10% - $row * 100% $row * 50%,
+                        floor($key / 2) *
+                            10% -
+                            $row *
+                            100%
+                            ceil($key % 2) *
+                            50% +
+                            ($row * 50%),
+                        ceil($key / 2) * 10% - $row * 100% ($row + 1) * 50%
+                    );
+                    transform-origin: random(100) -
+                        50 +
+                        floor($i / 2) *
+                        10% -
+                        $row *
+                        100%
+                        random(100) -
+                        50 +
+                        $row *
+                        50%;
+                    animation: fly#{$key}
+                        5s
+                        cubic-bezier(0.36, 0.1, 0.16, 1)
+                        8s -
+                        ($i * 40ms)
+                        both;
+
+                    @keyframes fly#{$key} {
+                        $initX: random(1000) - 500;
+                        $initY: random(1000) - 500;
+                        $initZ: random(1000) - 500;
+                        $initDepth: random(3000) - 2500;
+                        0% {
+                            opacity: 0;
+                            transform: rotateX(#{$initX}deg)
+                                rotateY(#{$initY}deg) rotateZ(#{$initZ}deg)
+                                translateZ(#{$initDepth}px);
+                        }
+                        10% {
+                            opacity: 0;
+                            transform: rotateX(#{$initX}deg)
+                                rotateY(#{$initY}deg) rotateZ(#{$initZ}deg)
+                                translateZ(#{$initDepth}px);
+                        }
+                        90% {
+                            opacity: 1;
+                            transform: rotate(0deg) rotateY(0deg) rotateZ(0deg)
+                                translateZ(0);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: rotate(0deg) rotateY(0deg) rotateZ(0deg)
+                                translateZ(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
