@@ -1,3 +1,5 @@
+$webkit: -webkit-;
+
 body {
     box-sizing: border-box;
     display: flex;
@@ -43,6 +45,8 @@ body {
                 background-size: 185px 149px;
                 shape-outside: url(./img/house.png);
                 shape-margin: 15px;
+                #{$webkit}shape-outside: url(./img/house.png);
+                #{$webkit}shape-margin: 15px;
             }
 
             p {
