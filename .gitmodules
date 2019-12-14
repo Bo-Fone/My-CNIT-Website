@@ -2,3 +2,6 @@
 	path = cnit-133a/hw5/Drylo
 	url = https://github.com/Bo-Fone/Drylo.git
 	branch = master
+[submodule "cnit-133a/hw6/enrollment"]
+	path = cnit-133a/hw6/enrollment
+	url = https://github.com/Bo-Fone/Enrollment.git
