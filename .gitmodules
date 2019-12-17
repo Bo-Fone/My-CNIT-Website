@@ -5,3 +5,6 @@
 [submodule "cnit-133a/hw6/Enrollment"]
 	path = cnit-133a/hw6/Enrollment
 	url = https://github.com/Bo-Fone/Enrollment.git
+[submodule "cnit-133a/hw7/Vue-Reminder"]
+	path = cnit-133a/hw7/Vue-Reminder
+	url = https://github.com/Bo-Fone/Vue-Reminder.git
